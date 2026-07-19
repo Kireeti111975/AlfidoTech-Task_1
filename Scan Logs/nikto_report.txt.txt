@@ -1,0 +1,10 @@
+- Nikto v2.6.0/
++ Target Host: interview-quiz-buddy.lovable.app
++ Target Port: 443
++ GET /: Cloudflare detected via cf-ray header. Recommend proxying via Burp or mitmproxy to avoid TLS fingerprint blocks. See: https://github.com/sullo/nikto/wiki/Using-a-Proxy: 
++ SSL Info:           Subject:  /CN=lovable.app
+                      CN:       lovable.app
+                      SAN:      lovable.app, *.lovable.app
+                      Ciphers:  TLS_AES_256_GCM_SHA384
+                      Issuer:   /C=US/O=Google Trust Services/CN=WE1
++ GET /robots.txt: contains 5 entries which should be manually viewed. See: https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt: 

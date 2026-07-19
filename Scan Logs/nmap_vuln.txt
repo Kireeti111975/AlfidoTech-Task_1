@@ -1,0 +1,310 @@
+# Nmap 7.98 scan initiated Sun Jun 14 06:04:09 2026 as: /usr/lib/nmap/nmap --privileged --script vuln -oN reports/nmap_vuln.txt interview-quiz-buddy.lovable.app
+Nmap scan report for interview-quiz-buddy.lovable.app (185.41.148.1)
+Host is up (0.086s latency).
+Other addresses for interview-quiz-buddy.lovable.app (not scanned): 2a07:8240::1 2a07:8240::2 185.41.148.2
+rDNS record for 185.41.148.1: lovable-app-wd-1-4.p.l5e.io
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+443/tcp  open  https
+| http-vuln-cve2010-0738: 
+|_  /jmx-console/: Authentication was not required
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=interview-quiz-buddy.lovable.app
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: https://interview-quiz-buddy.lovable.app:443/assets/index-DPGGJ5g_.js
+|     Form id: 
+|_    Form action: /submit
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+8080/tcp open  http-proxy
+8443/tcp open  https-alt
+|_http-majordomo2-dir-traversal: ERROR: Script execution failed (use -d to debug)
+| http-enum: 
+|   /blog/: Blog
+|   /weblog/: Blog
+|   /weblogs/: Blog
+|   /wordpress/: Blog
+|   /wiki/: Wiki
+|   /mediawiki/: Wiki
+|   /wiki/Main_Page: Wiki
+|   /tikiwiki/: Tikiwiki
+|   /cgi-bin/mj_wwwusr: Majordomo2 Mailing List
+|   /majordomo/mj_wwwusr: Majordomo2 Mailing List
+|   /j2ee/examples/servlets/: Oracle j2ee examples
+|   /j2ee/examples/jsp/: Oracle j2ee examples
+|   /dsc/: Trend Micro Data Loss Prevention Virtual Appliance
+|   /websvn/: WEBSVN Repository
+|   /repos/: Possible code repository
+|   /repo/: Possible code repository
+|   /svn/: Possible code repository
+|   /cvs/: Possible code repository
+|   /frontend/x3/: CPanel
+|   /egroupware/: eGroupware
+|   /aphpkb/: Andys PHP Knowledgebase
+|   /webedition/we/include/we_modules/: Web Edition
+|   /webedition/: Web Edition
+|   /Examples/: Possible documentation files
+|   /cgi-bin/vcs: Mitel Audio and Web Conferencing (AWC)
+|   /ocsreports/: OCS Inventory
+|   /forum/: Forum
+|   /forums/: Forum
+|   /smf/: Forum
+|   /phpbb/: Forum
+|   /manager/: Possible admin folder
+|   /admin/: Possible admin folder
+|   /admin/admin/: Possible admin folder
+|   /administrator/: Possible admin folder
+|   /moderator/: Possible admin folder
+|   /webadmin/: Possible admin folder
+|   /adminarea/: Possible admin folder
+|   /bb-admin/: Possible admin folder
+|   /adminLogin/: Possible admin folder
+|   /admin_area/: Possible admin folder
+|   /panel-administracion/: Possible admin folder
+|   /instadmin/: Possible admin folder
+|   /memberadmin/: Possible admin folder
+|   /administratorlogin/: Possible admin folder
+|   /adm/: Possible admin folder
+|   /joomla/administrator: Possible admin folder
+|   /admincp/: Possible admin folder
+|   /wp-json: Possible admin folder
+|   /adm1n/: Possible admin folder
+|   /4dm1n/: Possible admin folder
+|   /administr8/: Possible admin folder
+|   /administer/: Possible admin folder
+|   /administrators/: Possible admin folder
+|   /adminpro/: Possible admin folder
+|   /admins/: Possible admin folder
+|   /maintenance/: Possible admin folder
+|   /Lotus_Domino_Admin/: Possible admin folder
+|   /hpwebjetadmin/: Possible admin folder
+|   /_admin/: Possible admin folder
+|   /_administrator/: Possible admin folder
+|   /_administrador/: Possible admin folder
+|   /_admins/: Possible admin folder
+|   /_administrators/: Possible admin folder
+|   /_administradores/: Possible admin folder
+|   /_administracion/: Possible admin folder
+|   /_4dm1n/: Possible admin folder
+|   /_adm1n/: Possible admin folder
+|   /_Admin/: Possible admin folder
+|   /system_administration/: Possible admin folder
+|   /system-administration/: Possible admin folder
+|   /system-admin/: Possible admin folder
+|   /system-admins/: Possible admin folder
+|   /system-administrators/: Possible admin folder
+|   /administracion-sistema/: Possible admin folder
+|   /Administracion/: Possible admin folder
+|   /Admin/: Possible admin folder
+|   /Administrator/: Possible admin folder
+|   /Manager/: Possible admin folder
+|   /Adm/: Possible admin folder
+|   /systemadmin/: Possible admin folder
+|   /admin108/: Possible admin folder
+|   /pec_admin/: Possible admin folder
+|   /system/admin/: Possible admin folder
+|   /plog-admin/: Possible admin folder
+|   /ESAdmin/: Possible admin folder
+|   /axis2-admin/: Possible admin folder
+|   /_sys/: Possible admin folder
+|   /sitecore/admin/: Possible admin folder
+|   /sitecore/login/admin/: Possible admin folder
+|   /backup/: Possible backup
+|   /backup: Possible backup
+|   /backups/: Possible backup
+|   /bak/: Possible backup
+|   /back/: Possible backup
+|   /cache/backup/: Possible backup
+|   /admin/backup/: Possible backup
+|   /atom/: RSS or Atom feed
+|   /rss/: RSS or Atom feed
+|   /etc/passwd: Webroot might be in root folder
+|   /example/: Sample scripts
+|   /examples/: Sample scripts
+|   /iissamples/: Sample scripts
+|   /j2eeexamples/: Sample scripts
+|   /j2eeexamplesjsp/: Sample scripts
+|   /sample/: Sample scripts
+|   /ncsample/: Sample scripts
+|   /fpsample/: Sample scripts
+|   /cmsample/: Sample scripts
+|   /samples/: Sample scripts
+|   /login/: Login page
+|   /test/: Test page
+|   /webmail/: Mail folder
+|   /mail/: Mail folder
+|   /log/: Logs
+|   /logs/: Logs
+|   /wwwlog/: Logs
+|   /wwwlogs/: Logs
+|   /mail_log_files/: Logs
+|   /mono/: Mono
+|   /robots.txt: Robots file
+|   /eyeos/: Possible eyeOS installation
+|   /ehcp/?op=applyforftpaccount: Easy Hosting Control Panel
+|   /ehcp/?op=applyforaccount: Easy Hosting Control Panel
+|   /ehcp/?op=applyfordomainaccount: Easy Hosting Control Panel
+|   /vhosts/ehcp/?op=applyforftpaccount: Easy Hosting Control Panel
+|   /vhosts/ehcp/?op=applyforaccount: Easy Hosting Control Panel
+|   /vhosts/ehcp/?op=applyfordomainaccount: Easy Hosting Control Panel
+|   /sourcebans/: SourceBans - Steam server application
+|   /cgi-bin/ck/mimencode: ContentKeeper Web Appliance
+|   /cgi-bin/masterCGI?: Alcatel-Lucent OmniPCX Enterprise
+|   /tiny_mce/plugins/filemanager/: Tiny MCE File Upload
+|   /ajaxfilemanager/: AJAX File Manager
+|   /nagios3/: Nagios3
+|   /cacti/: Cacti Web Monitoring
+|   /imc/: 3Com Intelligent Management Center
+|   /imcws/: 3Com Intelligent Management Center
+|   /partymgr/: Apache OFBiz
+|   /YUI-upload/html: YUI Images / File Upload
+|   /Uploadify/: Uploadify
+|   /syssite/: ShopEx
+|   /modules/docmanager/doctypetemplates/myuploadedfile: Achievo
+|   /dhost/: Novell eDirectory
+|   /zp-core/: Zen Photo
+|   /amember/: aMember
+|   /arcsight/: Arcsight
+|   /beef/: BeEF Browser Exploitation Framework
+|   /BEEF/: BeEF Browser Exploitation Framework
+|   /deploymentmanager/: IBM Proventia
+|   /dotDefender/: dotDefender Web Application Firewall
+|   /actuator/: Spring Boot Actuator endpoint
+|   /auditevents/: Spring Boot Actuator endpoint
+|   /autoconfig/: Spring Boot Actuator endpoint
+|   /beans/: Spring Boot Actuator endpoint
+|   /configprops/: Spring Boot Actuator endpoint
+|   /env/: Spring Boot Actuator endpoint
+|   /flyway/: Spring Boot Actuator endpoint
+|   /health/: Spring Boot Actuator endpoint
+|   /healthcheck/: Spring Boot Actuator endpoint
+|   /healthchecks/: Spring Boot Actuator endpoint
+|   /loggers/: Spring Boot Actuator endpoint
+|   /liquibase/: Spring Boot Actuator endpoint
+|   /metrics/: Spring Boot Actuator endpoint
+|   /mappings/: Spring Boot Actuator endpoint
+|   /trace/: Spring Boot Actuator endpoint
+|   /heapdump/: Spring MVC Endpoint
+|   /jolokia/: Spring MVC Endpoint
+|   /vmware/: VMWare
+|   /ui/: VMWare
+|   /citrix/: Citrix
+|   /Citrix/: Citrix
+|   /citrix/AccessPlatform/auth/clientscripts/: Citrix
+|   /AccessPlatform/auth/clientscripts/: Citrix
+|   /manager/html/upload: Apache Tomcat
+|   /manager/html: Apache Tomcat
+|   /axis2/: Apache Axis2
+|   /web-console/Invoker: JBoss Console
+|   /invoker/JMXInvokerServlet: JBoss Console
+|   /invoker/: JBoss Console
+|   /jmx-console/: JBoss Console
+|   /admin-console/: JBoss Console
+|   /flexfm/: Flex File Manager
+|   /printer/image: Lexmark Printer
+|   /phpmyadmin/: phpMyAdmin
+|   /phpMyAdmin/: phpMyAdmin
+|   /PHPMyAdmin/: phpMyAdmin
+|   /PMA/: phpMyAdmin
+|   /pma/: phpMyAdmin
+|   /dbadmin/: phpMyAdmin
+|   /myadmin/: phpMyAdmin
+|   /php-my-admin/: phpMyAdmin
+|   /phpMyAdmin2/: phpMyAdmin
+|   /phpMyAdmin-2/: phpMyAdmin
+|   /phpMyAdmin-2.2.3/: phpMyAdmin
+|   /phpMyAdmin-2.2.6/: phpMyAdmin
+|   /phpMyAdmin-2.5.1/: phpMyAdmin
+|   /phpMyAdmin-2.5.4/: phpMyAdmin
+|   /phpMyAdmin-2.5.5-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.5.5-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.5.5/: phpMyAdmin
+|   /phpMyAdmin-2.5.5-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.5.6-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.5.6-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.5.6/: phpMyAdmin
+|   /phpMyAdmin-2.5.7/: phpMyAdmin
+|   /phpMyAdmin-2.5.7-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-alpha/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-alpha2/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-beta1/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-beta2/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-rc3/: phpMyAdmin
+|   /phpMyAdmin-2.6.0/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-pl2/: phpMyAdmin
+|   /phpMyAdmin-2.6.0-pl3/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.6.1/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-pl2/: phpMyAdmin
+|   /phpMyAdmin-2.6.1-pl3/: phpMyAdmin
+|   /phpMyAdmin-2.6.2-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.2-beta1/: phpMyAdmin
+|   /phpMyAdmin-2.6.2/: phpMyAdmin
+|   /phpMyAdmin-2.6.2-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.3/: phpMyAdmin
+|   /phpMyAdmin-2.6.3-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.3-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-pl2/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-pl3/: phpMyAdmin
+|   /phpMyAdmin-2.6.4-pl4/: phpMyAdmin
+|   /phpMyAdmin-2.6.4/: phpMyAdmin
+|   /phpMyAdmin-2.7.0-beta1/: phpMyAdmin
+|   /phpMyAdmin-2.7.0-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.7.0-pl1/: phpMyAdmin
+|   /phpMyAdmin-2.7.0-pl2/: phpMyAdmin
+|   /phpMyAdmin-2.7.0/: phpMyAdmin
+|   /phpMyAdmin-2.8.0-beta1/: phpMyAdmin
+|   /phpMyAdmin-2.8.0-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.8.0-rc2/: phpMyAdmin
+|   /phpMyAdmin-2.8.0/: phpMyAdmin
+|   /phpMyAdmin-2.8.0.1/: phpMyAdmin
+|   /phpMyAdmin-2.8.0.2/: phpMyAdmin
+|   /phpMyAdmin-2.8.0.3/: phpMyAdmin
+|   /phpMyAdmin-2.8.0.4/: phpMyAdmin
+|   /phpMyAdmin-2.8.1-rc1/: phpMyAdmin
+|   /phpMyAdmin-2.8.1/: phpMyAdmin
+|   /phpMyAdmin-2.8.2/: phpMyAdmin
+|   /sqlmanager/: phpMyAdmin
+|   /php-myadmin/: phpMyAdmin
+|   /phpmy-admin/: phpMyAdmin
+|   /mysqladmin/: phpMyAdmin
+|   /mysql-admin/: phpMyAdmin
+|   /websql/: phpMyAdmin
+|   /_phpmyadmin/: phpMyAdmin
+|   /852566C90012664F: Lotus Domino
+|   /iNotes/Forms5.nsf/$DefaultNav: Lotus Domino
+|   /_app_bin: MS Sharepoint
+|   /_controltemplates: MS Sharepoint
+|   /_layouts: MS Sharepoint
+|   /sitedirectory: MS Sharepoint
+|   /lists/tasks/: MS Sharepoint
+|   /lists/: MS Sharepoint
+|   /owa/: Outlook Web Access
+|   /tsweb/: Remote Desktop Web Connection
+|   /reportserver/: Microsoft SQL Report Service
+|   /_vti_bin/: Frontpage file or folder
+|   /_vti_cnf/: Frontpage file or folder
+|   /_vti_log/: Frontpage file or folder
+|   /_vti_pvt/: Frontpage file or folder
+|   /_vti_txt/: Frontpage file or folder
+|   /.svn/: Subversion folder
+|   /uir//etc/passwd: Possible D-Link router directory traversal vulnerability (CVE-2018-10822)
+|_  /uir//tmp/csman/0: Possible D-Link router plaintext password file exposure (CVE-2018-10824)
+| http-vuln-cve2010-0738: 
+|_  /jmx-console/: Authentication was not required
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+
+# Nmap done at Sun Jun 14 06:20:36 2026 -- 1 IP address (1 host up) scanned in 987.40 seconds

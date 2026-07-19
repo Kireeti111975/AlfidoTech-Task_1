@@ -1,0 +1,5 @@
+interview-quiz-buddy.lovable.app has address 185.41.148.1
+interview-quiz-buddy.lovable.app has address 185.41.148.2
+interview-quiz-buddy.lovable.app has IPv6 address 2a07:8240::2
+interview-quiz-buddy.lovable.app has IPv6 address 2a07:8240::1
+interview-quiz-buddy.lovable.app has HTTP service bindings 1 . alpn="h2" ipv4hint=185.41.148.1,185.41.148.2 ipv6hint=2a07:8240::1,2a07:8240::2

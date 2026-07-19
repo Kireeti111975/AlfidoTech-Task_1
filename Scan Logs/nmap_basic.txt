@@ -1,0 +1,15 @@
+# Nmap 7.98 scan initiated Sun Jun 14 04:47:58 2026 as: /usr/lib/nmap/nmap --privileged -oN reports/nmap_basic.txt interview-quiz-buddy.lovable.app
+Nmap scan report for interview-quiz-buddy.lovable.app (185.41.148.2)
+Host is up (0.046s latency).
+Other addresses for interview-quiz-buddy.lovable.app (not scanned): 2a07:8240::2 2a07:8240::1 185.41.148.1
+rDNS record for 185.41.148.2: lovable-app-wd-2-4.p.l5e.io
+Scanned at 2026-06-14 04:47:58 EDT for 1383s
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+8080/tcp open  http-proxy
+8443/tcp open  https-alt
+
+Read from /usr/share/nmap: nmap-protocols nmap-services.
+# Nmap done at Sun Jun 14 05:11:01 2026 -- 1 IP address (1 host up) scanned in 1383.38 seconds

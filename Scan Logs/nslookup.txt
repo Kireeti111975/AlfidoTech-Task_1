@@ -1,0 +1,13 @@
+Server:		202.83.30.162
+Address:	202.83.30.162#53
+
+Non-authoritative answer:
+Name:	interview-quiz-buddy.lovable.app
+Address: 185.41.148.1
+Name:	interview-quiz-buddy.lovable.app
+Address: 185.41.148.2
+Name:	interview-quiz-buddy.lovable.app
+Address: 2a07:8240::2
+Name:	interview-quiz-buddy.lovable.app
+Address: 2a07:8240::1
+
